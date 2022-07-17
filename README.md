@@ -27,6 +27,7 @@ Add:
       - +your_number
       - +your_number
  # Run
+`cd Pyrostring`
 `python main.py`
 
 # Guide
