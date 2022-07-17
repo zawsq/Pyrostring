@@ -3,7 +3,7 @@
 Pyrogram Fast Session String Generator
 
 ---
-
+**This script will auto filter existing/duplicated session strings to avoid 2 copy**
 ## Installation
 clone the source code
 
