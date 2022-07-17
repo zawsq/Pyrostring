@@ -1,1 +1,1 @@
-__Pyrostring__ = "1.0.00"
+__Pyrostring__ = "1.0"
