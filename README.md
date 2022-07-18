@@ -7,7 +7,7 @@ Pyrogram Fast Session String Generator
 ## Installation
 clone the source code
 
-`git clone https://github.com/GojouSats/Pyrostring`
+`git clone https://github.com/GojouSats/Pyrostring.git`
 
 `pip install -r requirements.txt`
 
