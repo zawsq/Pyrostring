@@ -12,6 +12,7 @@ setup(
       description='Pyrogram Fast Session String Generator',
       author='GojouSats',
       url='https://github.com/GojouSats/Pyrostring',
-      packages=requirements,
+      packages=find_packages(),
+      install_requires=requirements
      )    
     
