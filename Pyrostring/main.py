@@ -1,17 +1,28 @@
+import os, asyncio,pandas,sys
 from pyrogram import Client
 from pyrogram.errors import AuthKeyUnregistered,SessionPasswordNeeded
-import os, asyncio,pandas
+from pandas.errors import EmptyDataError
 from typing import List
 
 #config.py
 from config import API_ID,API_HASH
+path = os.path.dirname(os.path.abspath(__file__))
+try:
+    numbers = pandas.read_csv(filepath_or_buffer=f"{path}/numbers.csv", header=None)
+    NUMBER_LIST  : List[int] = [col[0] for col in numbers.values.tolist()]
+except EmptyDataError:
+    print('NUMBER LIST IS EMPTY: PLEASE ADD YOUR NUMBER IN: numbers.csv')
+    sys.exit()
+
+try:
+    strings = pandas.read_csv(filepath_or_buffer=f"{path}/session_string.csv", header=None)
+    STRING_LIST  : List[str] = [col[0] for col in strings.values.tolist()]
+except EmptyDataError:
+    STRING_LIST = []
+    
 
 
-numbers = pandas.read_csv(filepath_or_buffer="numbers.csv", header=None)
-strings = pandas.read_csv(filepath_or_buffer="session_string.csv", header=None)
 
-NUMBER_LIST  : List[int] = [col[0] for col in numbers.values.tolist()]
-STRING_LIST  : List[str] = [col[0] for col in strings.values.tolist()]
 
 async def multi():
     print("__STARTED__")
