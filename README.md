@@ -11,10 +11,6 @@ clone the source code
 
 `pip install -r requirements.txt`
 
-or 
-
-`python setup.py`
-
 ## [Config](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/config.py)
 
 Edit:
