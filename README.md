@@ -19,6 +19,7 @@ Edit:
 
 Add:
   - Put all your number list in [numbers.csv](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/numbers.csv) :
+
     Format:
       - +your_number
       - +your_number
