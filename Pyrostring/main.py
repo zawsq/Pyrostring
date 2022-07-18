@@ -46,7 +46,6 @@ async def multi():
             print(f"{cli} | {name.first_name}")
             session_string = await app.export_session_string()
             data = cli,session_string
-            print(data)
             STRING_CACHE.append(data)
         except AuthKeyUnregistered:
             try:
