@@ -33,5 +33,8 @@ Add:
   
 **AUTH PASSWORD:**
   - enter your telegram authentication password
+---
+<h1 align="center"> <a href="https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/session_string.csv">All your session string will be save on session_string.csv</a> <a href="https://octo-ring.com/p/GojouSats/prev"><</a>
 
-### All your session string will be save on [session_string.csv](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/session_string.csv)
+
+
