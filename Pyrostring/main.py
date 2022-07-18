@@ -1,6 +1,6 @@
 import os, asyncio,pandas,sys
 from pyrogram import Client
-from pyrogram.errors import AuthKeyUnregistered,SessionPasswordNeeded
+from pyrogram.errors import AuthKeyUnregistered,SessionPasswordNeeded,PhoneCodeInvalid,PasswordHashInvalid
 from pandas.errors import EmptyDataError
 from typing import List
 
@@ -31,7 +31,7 @@ async def multi():
         if cli in STRING_LIST:
             continue
         cli = str(cli)
-        app = Client(f"session/{cli}", api_id=API_ID, api_hash=API_HASH)
+        app = Client(f"{path}/session/{cli}", api_id=API_ID, api_hash=API_HASH)
         await app.connect()
         try:
             name = await app.get_me()
@@ -44,10 +44,24 @@ async def multi():
             try:
                 print(f'{cli} : NEED SESSION')
                 send_code = await app.send_code(cli)
-                await app.sign_in(cli, send_code.phone_code_hash, input("Enter the code: "))
+                try:
+                    await app.sign_in(cli, send_code.phone_code_hash, phone_code = input("Enter the code: "))
+                except PhoneCodeInvalid:
+                    try:
+                        await app.sign_in(cli, send_code.phone_code_hash, phone_code  = input("Phone Code Invalid | Enter the code: "))
+                    except PhoneCodeInvalid:
+                        print(f'SKIPPING: {cli} WRONG CODE 2x')
+                        continue
+                        
             except SessionPasswordNeeded:
-                auth_pass = input(str("Enter Auth Password: "))
-                await app.check_password(auth_pass)
+                try:
+                    await app.check_password(input(str("Enter Auth Password: ")))
+                except SessionPasswordNeeded:
+                    try:
+                        await app.check_password(input(str("Invalid Auth | Enter Auth Password: ")))
+                    except SessionPasswordNeeded:
+                        print(f'SKIPPING: {cli} WRONG AUTH 2x')
+                        continue
 
             name = await app.get_me()
             print(f"{cli} | {name.first_name}")
