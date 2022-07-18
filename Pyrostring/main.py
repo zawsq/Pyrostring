@@ -31,7 +31,15 @@ async def multi():
         if cli in STRING_LIST:
             continue
         cli = str(cli)
-        app = Client(f"{path}/session/{cli}", api_id=API_ID, api_hash=API_HASH)
+        """
+        when reading a csv ints + is removed because a number is not negative:
+            - change:
+                - f"{path}/session/+{cli}"
+                - remove the + before {cli} if you dont need a + on your sessions:
+                    - f"{path}/session/{cli}"
+        """
+        
+        app = Client(f"{path}/session/+{cli}", api_id=API_ID, api_hash=API_HASH)
         await app.connect()
         try:
             name = await app.get_me()
