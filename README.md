@@ -34,4 +34,4 @@ Add:
 **AUTH PASSWORD:**
   - enter your telegram authentication password
 
-All your session string will be save on [session_string.csv](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/session_string.csv)
+### All your session string will be save on [session_string.csv](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/session_string.csv)
