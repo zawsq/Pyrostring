@@ -4,6 +4,9 @@ Pyrogram Fast Session String Generator
 
 ---
   **This script will auto filter existing/duplicated session strings to avoid multiple copy**
+#### NOTE
+  - You need to create to all account first in telegram x or telegram apps 
+
 ## Installation
 clone the source code
 
