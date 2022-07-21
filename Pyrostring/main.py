@@ -73,7 +73,8 @@ async def multi():
             name = await app.get_me()
             print(f"{cli} | {name.first_name}")
             session_string = await app.export_session_string()
-            STRING_CACHE.append({cli:session_string})
+            data = cli,session_string
+            STRING_CACHE.append(data)
         
     Data_frame = pandas.DataFrame(STRING_CACHE)
     Data_frame.to_csv(path_or_buf='session_string.csv',index=False,mode='a',header=False)
