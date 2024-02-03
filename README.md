@@ -1,44 +1,48 @@
-# Pyrostring
-<h1 align="center"></a> <a href="https://t.me/GojouSats"><img align="center" src="https://chpic.su/_data/stickers/s/Sorcery_Fight/Sorcery_Fight_056.webp" height="200px"></a>
-Pyrogram Fast Session String Generator
+## Pyrostring
+<div align="center">
+🪡
+</div>
+
+`Pyrostring` generates session strings for `Telegram` accounts using `Pyrogram` and all session string generated is usable on `Pyrogram forks`.
+
+#### Note
+Before running the script, ensure that you have created all accounts in Telegram X or the official Telegram app.
+
+#### Installation
+1. Clone the repository
+- `git clone https://github.com/zawsq/Pyrostring.git`
+2. Install the required dependencies
+- `pip install -r requirements.txt`
+
+#### Configuration
+After cloning the repository, you need to edit the `config.py` file to include your API credentials:
+- Update `API_ID` and `API_HASH` with your own values.
+
+Put your numbers in `numbers.csv`
+Format should be:
+- +your_number
+- +your_number
+
+
+Refer to the [configuration guide](https://github.com/zawsq/Pyrostring/blob/main/Pyrostring/config.py).
+
+#### Running the Script
+Navigate to the Pyrostring directory and run `main.py`
+
+#### Usage Guide
+When prompted, provide the following information:
+
+- `NEED SESSION:` Enter the 4-digit code provided by Telegram.
+- `AUTH PASSWORD:` Enter your Telegram authentication password.
+
+Once completed, all your session strings will be saved in the `session_string.csv` file.
+
 
 ---
-  **This script will auto filter existing/duplicated session strings to avoid multiple copy**
-#### NOTE
-  - You need to create to all account first in telegram x or telegram apps 
+### Licensing
+This project is licensed under the MIT License.
+However, it uses the Pyrogram library, which is licensed under the GPL 3.0 License. This means that while the majority of this project is licensed under the MIT License, the use of Pyrogram is subject to the terms of the GPL 3.0 License.
 
-## Installation
-clone the source code
-
-`git clone https://github.com/GojouSats/Pyrostring.git`
-
-`pip install -r requirements.txt`
-
-## [Config](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/config.py)
-
-Edit:
-  - API_ID
-  - API_HASH
-
-Add:
-  - Put all your number list in [numbers.csv](https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/numbers.csv) :
-
-    Format:
-      - +your_number
-      - +your_number
- # Run
-`cd Pyrostring`
-
-`python main.py`
-
-# Guide
-**NEED SESSION:**
-  - enter your telegram 4 digit code
-  
-**AUTH PASSWORD:**
-  - enter your telegram authentication password
 ---
-<h1 align="center"> <a href="https://github.com/GojouSats/Pyrostring/blob/main/Pyrostring/session_string.csv">All your session string will be save on session_string.csv</a> <a href="https://octo-ring.com/p/GojouSats/prev"><</a>
-
-
+Please note that this script is intended for educational purposes only. Misuse of this tool may lead to account suspension or banning by Telegram. Use at your own risk.
 
