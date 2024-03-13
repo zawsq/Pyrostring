@@ -37,12 +37,6 @@ When prompted, provide the following information:
 
 Once completed, all your session strings will be saved in the `session_string.csv` file.
 
-
----
-### Licensing
-This project is licensed under the MIT License.
-However, it uses the Pyrogram library, which is licensed under the GPL 3.0 License. This means that while the majority of this project is licensed under the MIT License, the use of Pyrogram is subject to the terms of the GPL 3.0 License.
-
 ---
 Please note that this script is intended for educational purposes only. Misuse of this tool may lead to account suspension or banning by Telegram. Use at your own risk.
 
